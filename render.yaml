@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ai-coding-hub
+    env: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: WEBAPP_URL
+        sync: false
+      - key: ENCRYPTION_KEY
+        sync: false
+      - key: ADMIN_ID
+        sync: false
