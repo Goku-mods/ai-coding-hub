@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>AI Coding Hub</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <div class="eyebrow">AI DEVELOPMENT SYSTEM</div>
+      <h1>⚡ AI Coding Hub</h1>
+      <p>One request. Multiple AI roles. One finished build.</p>
+    </div>
+    <div class="status" id="statusDot">●</div>
+  </header>
+
+  <section class="hero card">
+    <div class="orb">✦</div>
+    <div>
+      <h2>Build anything.</h2>
+      <p>Architect → Coder → Reviewer → Debugger → Finalizer</p>
+    </div>
+  </section>
+
+  <nav class="tabs">
+    <button class="tab active" data-page="build">🚀 Build</button>
+    <button class="tab" data-page="api">🔑 API</button>
+    <button class="tab" data-page="models">🤖 Team</button>
+  </nav>
+
+  <main>
+    <section id="build" class="page active">
+      <div class="card">
+        <label>WHAT SHOULD I BUILD?</label>
+        <textarea id="prompt" placeholder="Example: Build a Python Telegram bot that manages multiple AI models..."></textarea>
+        <div class="chips">
+          <span>Python</span><span>Telegram</span><span>Web App</span><span>AI</span>
+        </div>
+        <button class="primary" id="buildBtn">🚀 START BUILD</button>
+      </div>
+      <div id="progress" class="card hidden"></div>
+      <div id="result" class="card hidden"></div>
+    </section>
+
+    <section id="api" class="page">
+      <div class="card">
+        <label>AI PROVIDER</label>
+        <select id="provider"><option value="openrouter">OpenRouter</option></select>
+        <label>YOUR API KEY</label>
+        <input id="apiKey" type="password" autocomplete="off" placeholder="sk-or-v1-...">
+        <p class="hint">The key is sent to your server only for validation and encrypted storage. It is never displayed back in full.</p>
+        <button class="primary" id="connectBtn">🔐 CONNECT & TEST</button>
+        <button class="danger hidden" id="removeBtn">REMOVE KEY</button>
+        <div id="apiMsg"></div>
+      </div>
+    </section>
+
+    <section id="models" class="page">
+      <div class="card">
+        <label>AI TEAM</label>
+        <div class="agent"><b>🧭 ARCHITECT</b><span>Plans the system</span></div>
+        <div class="agent"><b>💻 CODER</b><span>Writes implementation</span></div>
+        <div class="agent"><b>🔍 REVIEWER</b><span>Finds bugs & gaps</span></div>
+        <div class="agent"><b>🛠️ DEBUGGER</b><span>Applies fixes</span></div>
+        <div class="agent"><b>🚀 FINALIZER</b><span>Packages the final answer</span></div>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>
